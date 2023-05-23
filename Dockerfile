@@ -1,15 +1,15 @@
-FROM python:3.8.2-alpine3.11
-
-ENV FLASK_APP=main.py
-ENV FLASK_ENV=development
+#FROM python:3.8.2-alpine3.11
+FROM docker-registry.fourdigits.nl/fourdigits-public/django-base-image:39
+#ENV FLASK_APP=main.py
+#ENV FLASK_ENV=development
 
 #COPY . /app
-RUN mkdir -p /app
-COPY server.py /app/
-COPY requirements.txt /app/
-WORKDIR /app
+#RUN mkdir -p /app
+#COPY server.py /app/
+#COPY requirements.txt /app/
+#WORKDIR /app
 
-RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt
 
 #ENTRYPOINT FLASK_APP=/app/server.py flask run --host=0.0.0.0 --port=80
 
