@@ -4,8 +4,9 @@ ENV FLASK_APP=main.py
 ENV FLASK_ENV=development
 
 #COPY . /app
-COPY server.py /app
-COPY requirements.txt /app
+RUN mkdir -p /app
+COPY server.py /app/
+COPY requirements.txt /app/
 WORKDIR /app
 
 RUN pip install -r requirements.txt
