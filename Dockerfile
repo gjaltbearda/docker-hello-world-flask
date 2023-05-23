@@ -17,7 +17,7 @@ FROM alpine:latest
 COPY entrypoint.sh ./
 
 # Start and enable SSH
-RUN apt-get update
+#RUN apt-get update
 RUN apt-get install -y --no-install-recommends dialog
 RUN apt-get install -y --no-install-recommends openssh-server
 RUN echo "root:Docker!" | chpasswd
